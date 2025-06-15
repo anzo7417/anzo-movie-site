@@ -1,0 +1,66 @@
+<!-- index.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Movie Access</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    input[type="password"] {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Password to Access Movie</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Unlock</button><div class="hidden-content" id="movieContent">
+  <h3>🎬 Movie: The Hidden Vault</h3>
+  <p><a href="https://example.com/encrypted_movie.zip" download>Download Encrypted Movie File</a></p>
+  <p>Password: <strong>only-you-know</strong></p>
+</div>
+
+  </div>  <script>
+    function checkPassword() {
+      const entered = document.getElementById('password').value;
+      if (entered === 'my-secret') {
+        document.getElementById('movieContent').style.display = 'block';
+      } else {
+        alert('Incorrect Password!');
+      }
+    }
+  </script></body>
+</html>
